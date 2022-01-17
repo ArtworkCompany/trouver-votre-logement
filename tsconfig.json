@@ -16,6 +16,6 @@
 		"noEmit": true,
 		"jsx": "react"
 	},
-	"include": ["src", "config/store"],
+	"include": ["src", "config"],
 	"exclude": ["node_modules"]
 }

@@ -1,10 +1,7 @@
 import { combineReducers } from 'redux';
 
 import { RealEstate } from '../../realEstate/core/domain/entities/realEstate';
-import {
-	RealEstateAction,
-	RealEstateActionTypes,
-} from './realEstate.actions';
+import { RealEstateAction, RealEstateActionTypes } from './realEstate.actions';
 
 export interface RealEstateReducer {
 	data: RealEstate[];

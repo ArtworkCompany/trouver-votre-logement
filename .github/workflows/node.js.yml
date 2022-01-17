@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-engines
 
-      - name: Install dependencies
+      - name: Lint
         run: yarn lint:fix
 
       - name: Run the tests and generate coverage report

@@ -1,27 +1,25 @@
 {
-	"root": true,
 	"env": {
 		"browser": true,
 		"es2021": true,
 		"jest": true
 	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:@typescript-eslint/recommended",
-		"react-app",
-		"react-app/jest",
-		"plugin:prettier/recommended",
-		"airbnb"
-	],
+	"extends": ["airbnb-typescript", "airbnb/hooks", "plugin:@typescript-eslint/recommended", "plugin:jest/recommended", "plugin:prettier/recommended", "plugin:import/recommended"],
+	"ignorePatterns": [".eslintrc"],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
 		"ecmaVersion": 13,
+		"project": "tsconfig.json",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint", "prettier", "jest"],
+	"plugins": ["react", "@typescript-eslint/eslint-plugin", "jest"],
+	"root": true,
 	"rules": {
 		"@typescript-eslint/explicit-module-boundary-types": 0,
+		"@typescript-eslint/default-param-last": 0,
 		"no-console": [
 			"error",
 			{
@@ -29,9 +27,8 @@
 			}
 		],
 		"no-unneeded-ternary": 0,
-		"import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.test.ts", "**/__tests__/**", "jest-setup.ts"] }],
+		"import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
 		"linebreak-style": 0,
-		"import/prefer-default-export": 0,
-		"func-names": 0
+		"react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }]
 	}
 }

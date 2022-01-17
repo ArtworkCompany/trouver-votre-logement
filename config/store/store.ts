@@ -1,25 +1,12 @@
-import {
-	Action,
-	applyMiddleware,
-	combineReducers,
-	createStore,
-} from 'redux';
+import type { Action } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import {
-	combineEpics,
-	createEpicMiddleware,
-} from 'redux-observable';
+import { combineEpics, createEpicMiddleware } from 'redux-observable';
 
 import { RealEstateGateway } from '../../src/realEstate/core/domain/gateways/RealEstate.gateway';
 import { realEstateEpics } from '../../src/realEstate/store/realEstate.epics';
-import {
-	appState,
-	AppStateReducer,
-} from './appState/appState';
-import {
-	domainData,
-	DomainDataReducer,
-} from './domainData';
+import { appState, AppStateReducer } from './appState/appState';
+import { domainData, DomainDataReducer } from './domainData';
 
 export interface AppState {
 	appState: AppStateReducer;
