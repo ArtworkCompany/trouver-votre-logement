@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Trouver votre logement
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![CI/CD](https://github.com/samo-projects/trouver-votre-logement/workflows/CI/CD/badge.svg)
+[![Codecov](https://img.shields.io/codecov/c/github/samo-projects/trouver-votre-logement)](https://codecov.io/gh/samo-projects/trouver-votre-logement)
+![License](https://img.shields.io/github/license/samo-projects/trouver-votre-logement)
 
 ## Available Scripts
 
