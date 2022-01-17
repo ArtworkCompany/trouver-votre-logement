@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/trouver-votre-logement/static/css/main.073c9b0a.css",
+    "main.js": "/trouver-votre-logement/static/js/main.fbc0f70e.js",
+    "static/js/787.7fef741d.chunk.js": "/trouver-votre-logement/static/js/787.7fef741d.chunk.js",
+    "index.html": "/trouver-votre-logement/index.html",
+    "main.073c9b0a.css.map": "/trouver-votre-logement/static/css/main.073c9b0a.css.map",
+    "main.fbc0f70e.js.map": "/trouver-votre-logement/static/js/main.fbc0f70e.js.map",
+    "787.7fef741d.chunk.js.map": "/trouver-votre-logement/static/js/787.7fef741d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.fbc0f70e.js"
+  ]
+}
