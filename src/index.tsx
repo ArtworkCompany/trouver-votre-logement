@@ -1,16 +1,26 @@
-import './index.css';
+import './index.scss';
+import './i18n';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { Provider } from 'react-redux';
+
+import InMemoryRealEstateGateway from './adapters/secondaries/InMemoryRealEstate.gateway';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from './store/store';
+
+const realEstateGateway = new InMemoryRealEstateGateway();
+//  realEstateGateway.feedWith()
+
+const store = configureStore({ realEstateGateway });
 
 ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementById('root')
+  <Provider {...{ store }}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
