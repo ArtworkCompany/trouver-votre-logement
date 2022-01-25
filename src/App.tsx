@@ -1,9 +1,21 @@
-import './App.css';
+import React, { Suspense } from 'react';
 
-import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from 'react-router-dom';
 
-function App() {
-	return <div className="App">Coucou</div>;
-}
+import Home from './adapters/primaries/userInterface/Home.component';
+
+const App: React.FC = () => (
+  <Suspense fallback="loading">
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  </Suspense>
+);
 
 export default App;
