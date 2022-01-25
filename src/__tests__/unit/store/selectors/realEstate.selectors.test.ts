@@ -1,5 +1,8 @@
 import { RealEstate } from '../../../../core/domain/entities/realEstate';
-import { getRealEstateSelector } from '../../../../store/domainData/realEstate/realEstate.selectors';
+import {
+  getRealEstateSelector,
+  getTotalNumberRealEstateSelector,
+} from '../../../../store/domainData/realEstate/realEstate.selectors';
 import { AppState } from '../../../../store/store';
 
 describe('Unit: Real estate selector', () => {
@@ -84,6 +87,27 @@ describe('Unit: Real estate selector', () => {
       },
       realEstateAllIds: ['123abc'],
     });
+
+    done();
+  });
+
+  test('When there is the total number of real estate', (done) => {
+    const state: AppState = {
+      ...initialState,
+      domainData: {
+        ...initialState.domainData,
+        realEstate: {
+          data: {
+            byId: { '123abc': { id: '123abc', name: 'RE 1', price: 100000 } },
+            allIds: ['123abc'],
+          },
+        },
+      },
+    };
+
+    const totalNumberRealEstateSelector = getTotalNumberRealEstateSelector(state);
+
+    expect(totalNumberRealEstateSelector).toEqual(1);
 
     done();
   });

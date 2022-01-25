@@ -16,3 +16,5 @@ export const getRealEstateSelector = ({ appState, domainData }: AppState) => {
     realEstateAllIds: allIds,
   };
 };
+
+export const getTotalNumberRealEstateSelector = ({ domainData }: AppState) => domainData.realEstate.data.allIds.length;
